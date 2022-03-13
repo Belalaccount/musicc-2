@@ -101,7 +101,7 @@ async def stop_cmd(_, message):
         pass   
     await message.reply_text("Menghapus Database, Antrian, Log, File Mentah, Unduhan.")
     
-@app.on_message(command(["/pause", "", f"pause@{BOT_USERNAME}", "ps"]))
+@app.on_message(command(["/pause", "وقف", f"pause@{BOT_USERNAME}", "ps"]))
 async def pause(_, message: Message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
@@ -119,7 +119,7 @@ async def pause(_, message: Message):
     await music.pytgcalls.pause_stream(chat_id)
     await message.reply_text(f"🎧 Obrolan Suara Dijeda oleh {checking}!")
     
-@app.on_message(command(["/resume", "", f"resume@{BOT_USERNAME}", "rs"]))
+@app.on_message(command(["/resume", "كمل", f"resume@{BOT_USERNAME}", "rs"]))
 async def stop(_, message: Message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
@@ -138,7 +138,7 @@ async def stop(_, message: Message):
         await music.pytgcalls.resume_stream(chat_id)
         await message.reply_text(f"**🎧 Obrolan Suara Dilanjutkan Oleh {checking}!**")
 
-@app.on_message(command(["/end", "", f"end@{BOT_USERNAME}", "e"]))
+@app.on_message(command(["/end", "ايقاف", f"end@{BOT_USERNAME}", "e"]))
 async def stop(_, message: Message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
@@ -159,7 +159,7 @@ async def stop(_, message: Message):
     else:
         return await message.reply_text("Saya tidak berpikir jika ada sesuatu yang diputar di obrolan suara")
     
-@app.on_message(command(["/skip", "", f"skip@{BOT_USERNAME}", "sk"]))
+@app.on_message(command(["/skip", "تخطي", f"skip@{BOT_USERNAME}", "sk"]))
 async def stop(_, message: Message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
