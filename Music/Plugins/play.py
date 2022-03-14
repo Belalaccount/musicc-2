@@ -474,7 +474,7 @@ async def play(_, message: Message):
             return await mystic.edit_text(
                 f"لم يتم العثور على الأغنية.\n**الأسباب المحتملة:** {e} "
             )
-        thumb ="https://telegra.ph/file/fa0abbdfcfe3936c6a818.jpg"
+        thumb ="https://telegra.ph/file/2875489dea129c629dbdc.jpg"
         await mystic.delete()
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         hmo = await message.reply_photo(
