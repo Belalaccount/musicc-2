@@ -21,7 +21,7 @@ Disk: {disk}%
     return stats
 
 
-@app.on_message(command("بنج"))
+@app.on_message(command("ping"))
 async def ping(_, message: Message):
     uptime = await bot_sys_stats()
     start = datetime.now()
